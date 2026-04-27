@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proposal · RFP & Marketing Manager · Blake Elford for MedSpeed</title>
+  <meta name="description" content="A proposal-formatted response to MedSpeed's RFP & Marketing Manager position, prepared by Blake Elford." />
+
+  <meta property="og:title" content="Proposal · RFP & Marketing Manager · Blake Elford" />
+  <meta property="og:description" content="A proposal-formatted response to MedSpeed's open requirement, prepared by Blake Elford." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-paper: #f4f1ea;
+      --bg-page: #ffffff;
+      --bg-surface: #f7f4ed;
+      --text-primary: #1a1a1a;
+      --text-secondary: #59574f;
+      --text-tertiary: #908c81;
+      --border-tertiary: rgba(0, 0, 0, 0.09);
+      --border-secondary: rgba(0, 0, 0, 0.18);
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg-paper);
+      font-family: var(--font-sans);
+      color: var(--text-primary);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(244, 241, 234, 0.92);
+      backdrop-filter: saturate(140%) blur(8px);
+      -webkit-backdrop-filter: saturate(140%) blur(8px);
+      border-bottom: 0.5px solid var(--border-tertiary);
+    }
+
+    .toolbar-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+    }
+
+    .print-btn {
+      background: transparent;
+      border: 0.5px solid var(--border-secondary);
+      color: var(--text-secondary);
+      font: inherit;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .print-btn:hover { background: var(--bg-page); color: var(--text-primary); }
+    .print-btn svg { width: 12px; height: 12px; }
+
+    .doc-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem 4rem;
+    }
+
+    .doc-page {
+      background: var(--bg-page);
+      border: 0.5px solid var(--border-tertiary);
+      border-radius: var(--radius-lg);
+      padding: 3rem 2.75rem;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .doc-cover { padding: 4rem 2.75rem 3.25rem; }
+
+    .doc-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      margin: 0 0 2.5rem;
+    }
+
+    .doc-cover-title {
+      font-family: var(--font-serif);
+      font-size: 44px;
+      font-weight: 500;
+      line-height: 1.12;
+      margin: 0 0 0.5rem;
+      letter-spacing: -0.015em;
+    }
+
+    .doc-cover-sub {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      margin: 0 0 3rem;
+      font-style: italic;
+    }
+
+    .doc-cover-meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem 2rem;
+      padding-top: 1.5rem;
+      border-top: 0.5px solid var(--border-tertiary);
+    }
+
+    .doc-meta-label {
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      margin: 0 0 4px;
+    }
+
+    .doc-meta-value {
+      font-size: 14px;
+      color: var(--text-primary);
+      margin: 0;
+    }
+
+    .doc-meta-sub {
+      color: var(--text-secondary);
+      font-size: 13px;
+    }
+
+    .doc-confidential {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.75rem;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      border: 0.5px solid var(--border-tertiary);
+      padding: 4px 10px;
+      border-radius: var(--radius-md);
+    }
+
+    .doc-section-num {
+      font-family: var(--font-serif);
+      font-size: 13px;
+      color: var(--text-tertiary);
+      margin: 0 0 0.4rem;
+      letter-spacing: 0.04em;
+    }
+
+    .doc-section-title {
+      font-size: 26px;
+      font-weight: 500;
+      margin: 0 0 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 0.5px solid var(--border-tertiary);
+      letter-spacing: -0.01em;
+    }
+
+    .doc-body {
+      font-size: 15.5px;
+      color: var(--text-primary);
+      margin: 0 0 1rem;
+    }
+
+    .doc-body-muted {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      margin: 0 0 1rem;
+    }
+
+    .doc-list {
+      font-size: 15px;
+      color: var(--text-primary);
+      padding-left: 1.25rem;
+      margin: 0 0 1rem;
+    }
+    .doc-list li { margin-bottom: 0.5rem; }
+
+    .doc-toc-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.85rem 0;
+      border-bottom: 0.5px dashed var(--border-tertiary);
+      font-size: 14.5px;
+      text-decoration: none;
+      color: var(--text-primary);
+      transition: color 0.15s;
+    }
+    .doc-toc-item:last-child { border-bottom: none; }
+    .doc-toc-item:hover { color: var(--text-secondary); }
+
+    .doc-toc-num {
+      font-family: var(--font-serif);
+      color: var(--text-tertiary);
+      margin-right: 0.85rem;
+      min-width: 32px;
+    }
+
+    .doc-toc-title { flex: 1; }
+
+    .doc-toc-page {
+      color: var(--text-tertiary);
+      font-variant-numeric: tabular-nums;
+      font-size: 13px;
+    }
+
+    .doc-phase {
+      background: var(--bg-surface);
+      border-radius: var(--radius-md);
+      padding: 1.4rem 1.4rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .doc-phase-label {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      margin: 0 0 0.5rem;
+    }
+
+    .doc-phase-title {
+      font-size: 16.5px;
+      font-weight: 500;
+      margin: 0 0 0.7rem;
+    }
+
+    .doc-phase-list {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      padding-left: 1.1rem;
+      margin: 0;
+      line-height: 1.7;
+    }
+    .doc-phase-list li { margin-bottom: 0.4rem; }
+
+    .doc-matrix {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      table-layout: fixed;
+    }
+    .doc-matrix th {
+      text-align: left;
+      font-weight: 500;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      padding: 0 0 0.85rem;
+      border-bottom: 0.5px solid var(--border-secondary);
+    }
+    .doc-matrix th:first-child { width: 38%; padding-right: 1rem; }
+    .doc-matrix td {
+      vertical-align: top;
+      padding: 1.1rem 0;
+      border-bottom: 0.5px solid var(--border-tertiary);
+      line-height: 1.6;
+    }
+    .doc-matrix td:first-child {
+      padding-right: 1rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      font-size: 13.5px;
+    }
+    .doc-matrix td:last-child {
+      color: var(--text-secondary);
+      font-size: 13.5px;
+    }
+    .doc-matrix tr:last-child td { border-bottom: none; }
+
+    .doc-case {
+      margin-bottom: 1.85rem;
+      padding-bottom: 1.6rem;
+      border-bottom: 0.5px solid var(--border-tertiary);
+    }
+    .doc-case:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .doc-case-num {
+      font-family: var(--font-serif);
+      font-size: 12px;
+      color: var(--text-tertiary);
+      letter-spacing: 0.08em;
+      margin: 0 0 0.3rem;
+    }
+
+    .doc-case-title {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0 0 1rem;
+      letter-spacing: -0.005em;
+    }
+
+    .doc-case-row {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 0.85rem;
+      margin-bottom: 0.55rem;
+      font-size: 14.5px;
+      line-height: 1.65;
+    }
+
+    .doc-case-label {
+      color: var(--text-tertiary);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding-top: 3px;
+    }
+
+    .doc-case-text { color: var(--text-primary); }
+
+    .doc-diff { margin-bottom: 1.4rem; }
+
+    .doc-diff-title {
+      font-size: 15.5px;
+      font-weight: 500;
+      margin: 0 0 0.45rem;
+    }
+
+    .doc-diff-body {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    .doc-terms {
+      width: 100%;
+      font-size: 14.5px;
+      border-collapse: collapse;
+    }
+    .doc-terms tr td {
+      padding: 0.75rem 0;
+      border-bottom: 0.5px solid var(--border-tertiary);
+      vertical-align: top;
+    }
+    .doc-terms tr:last-child td { border-bottom: none; }
+    .doc-terms td:first-child {
+      width: 42%;
+      color: var(--text-secondary);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding-right: 1rem;
+    }
+    .doc-terms td:last-child { color: var(--text-primary); }
+
+    .doc-contact {
+      background: var(--bg-surface);
+      border-radius: var(--radius-md);
+      padding: 1.4rem 1.6rem;
+      margin-top: 1.25rem;
+    }
+
+    .doc-contact-name {
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0 0 0.5rem;
+    }
+
+    .doc-contact-line {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin: 0;
+      line-height: 1.8;
+    }
+
+    .doc-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1.75rem;
+      margin-top: 2.25rem;
+      border-top: 0.5px solid var(--border-tertiary);
+      font-size: 10.5px;
+      color: var(--text-tertiary);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .doc-stamp {
+      display: inline-block;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      margin-top: 1.5rem;
+      padding: 0.6rem 0.95rem;
+      border-left: 2px solid var(--border-secondary);
+      background: var(--bg-surface);
+    }
+
+    a { color: inherit; }
+
+    @media (max-width: 640px) {
+      .doc-wrap { padding: 1rem 1rem 3rem; }
+      .doc-page { padding: 2rem 1.5rem; }
+      .doc-cover { padding: 2.5rem 1.5rem 2.5rem; }
+      .doc-cover-title { font-size: 32px; }
+      .doc-cover-sub { font-size: 18px; margin-bottom: 2rem; }
+      .doc-cover-meta { grid-template-columns: 1fr; gap: 1rem; }
+      .doc-section-title { font-size: 22px; }
+      .doc-confidential { top: 1rem; right: 1rem; font-size: 9px; padding: 3px 8px; }
+      .doc-case-row { grid-template-columns: 1fr; gap: 0.25rem; }
+      .doc-case-label { padding-top: 0; }
+      .doc-matrix th:first-child { width: 42%; }
+      .doc-matrix td:first-child, .doc-matrix td:last-child { font-size: 12.5px; }
+      .toolbar-inner { padding: 0.7rem 1rem; font-size: 10.5px; }
+    }
+
+    @media print {
+      body { background: white; }
+      .toolbar { display: none; }
+      .doc-wrap { padding: 0; max-width: none; }
+      .doc-page {
+        border: none;
+        border-radius: 0;
+        margin: 0;
+        padding: 2.5rem 2rem;
+        page-break-after: always;
+        box-shadow: none;
+      }
+      .doc-page:last-child { page-break-after: auto; }
+      .doc-toc-item { page-break-inside: avoid; }
+      .doc-case { page-break-inside: avoid; }
+      .doc-phase { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <div class="toolbar-inner">
+      <span>Proposal · MedSpeed</span>
+      <button class="print-btn" onclick="window.print()" aria-label="Print or save as PDF">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+        Print / Save PDF
+      </button>
+    </div>
+  </div>
+
+  <div class="doc-wrap">
+
+    <section class="doc-page doc-cover" id="cover">
+      <span class="doc-confidential">Confidential</span>
+      <p class="doc-eyebrow">Proposal · April 2026</p>
+      <h1 class="doc-cover-title">RFP &amp; Marketing Manager</h1>
+      <p class="doc-cover-sub">A response to MedSpeed's open requirement</p>
+      <div class="doc-cover-meta">
+        <div>
+          <p class="doc-meta-label">Prepared for</p>
+          <p class="doc-meta-value">MedSpeed</p>
+          <p class="doc-meta-value doc-meta-sub">Hiring team, Elmhurst, IL</p>
+        </div>
+        <div>
+          <p class="doc-meta-label">Submitted by</p>
+          <p class="doc-meta-value">Blake W. Elford</p>
+          <p class="doc-meta-value doc-meta-sub">Chicago, IL</p>
+        </div>
+        <div>
+          <p class="doc-meta-label">Document reference</p>
+          <p class="doc-meta-value" style="font-variant-numeric: tabular-nums;">RFP-2026-0427-BE</p>
+        </div>
+        <div>
+          <p class="doc-meta-label">Validity</p>
+          <p class="doc-meta-value">90 days from issue</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc-page" id="contents">
+      <p class="doc-section-num">Contents</p>
+      <h2 class="doc-section-title">Table of contents</h2>
+      <a class="doc-toc-item" href="#executive-summary"><span class="doc-toc-num">01</span><span class="doc-toc-title">Executive summary</span><span class="doc-toc-page">03</span></a>
+      <a class="doc-toc-item" href="#understanding"><span class="doc-toc-num">02</span><span class="doc-toc-title">Understanding of your needs</span><span class="doc-toc-page">04</span></a>
+      <a class="doc-toc-item" href="#approach"><span class="doc-toc-num">03</span><span class="doc-toc-title">Proposed approach</span><span class="doc-toc-page">05</span></a>
+      <a class="doc-toc-item" href="#qualifications"><span class="doc-toc-num">04</span><span class="doc-toc-title">Qualifications &amp; capabilities matrix</span><span class="doc-toc-page">06</span></a>
+      <a class="doc-toc-item" href="#cases"><span class="doc-toc-num">05</span><span class="doc-toc-title">Relevant case studies</span><span class="doc-toc-page">07</span></a>
+      <a class="doc-toc-item" href="#why-blake"><span class="doc-toc-num">06</span><span class="doc-toc-title">Why Blake</span><span class="doc-toc-page">08</span></a>
+      <a class="doc-toc-item" href="#terms"><span class="doc-toc-num">07</span><span class="doc-toc-title">Investment &amp; terms</span><span class="doc-toc-page">09</span></a>
+      <a class="doc-toc-item" href="#references"><span class="doc-toc-num">08</span><span class="doc-toc-title">References &amp; next steps</span><span class="doc-toc-page">10</span></a>
+    </section>
+
+    <section class="doc-page" id="executive-summary">
+      <p class="doc-section-num">01</p>
+      <h2 class="doc-section-title">Executive summary</h2>
+      <p class="doc-body">MedSpeed has issued a request for a marketing partner who can convert healthcare logistics prospects through compelling proposals, dynamic presentations, and a tightly maintained content library, while serving as a strategic and tactical partner to the sales organization.</p>
+      <p class="doc-body">This proposal outlines why Blake Elford is the right fit for that engagement. As Associate Marketing Manager at Life Fitness, Blake authored the strategic narrative for a $700K+/year key account RFP, built sales enablement libraries actively used by field sellers, and generated $670K+ in attributed pipeline from a single targeted campaign.</p>
+      <p class="doc-body">The sections that follow detail his proposed approach to the role, qualifications mapped against MedSpeed's stated requirements, three relevant case studies, and terms of engagement.</p>
+      <div class="doc-footer"><span>MedSpeed · RFP-2026-0427-BE</span><span>Page 03</span></div>
+    </section>
+
+    <section class="doc-page" id="understanding">
+      <p class="doc-section-num">02</p>
+      <h2 class="doc-section-title">Understanding of your needs</h2>
+      <p class="doc-body-muted">Based on the position description, MedSpeed is seeking a partner who can:</p>
+      <ul class="doc-list">
+        <li>Author RFP and RFI responses that convert healthcare logistics prospects into customers</li>
+        <li>Maintain and continuously refresh a brand-aligned proposal content library</li>
+        <li>Build dynamic presentations that articulate the value of healthcare logistics across complex buyer journeys</li>
+        <li>Coordinate cross-functional intelligence gathering and lead a market intelligence task force</li>
+        <li>Support sales across lead generation, prospect events, trade shows, and conferences</li>
+        <li>Operate as a strategic and tactical partner, strong on thinking and equally strong on doing</li>
+      </ul>
+      <p class="doc-body" style="margin-top: 1.25rem;">The sections that follow address each of these requirements directly.</p>
+      <div class="doc-footer"><span>MedSpeed · RFP-2026-0427-BE</span><span>Page 04</span></div>
+    </section>
+
+    <section class="doc-page" id="approach">
+      <p class="doc-section-num">03</p>
+      <h2 class="doc-section-title">Proposed approach</h2>
+      <p class="doc-body-muted" style="margin-bottom: 1.5rem;">A 90-day plan to establish credibility, build foundations, and accelerate proposal velocity.</p>
+
+      <div class="doc-phase">
+        <p class="doc-phase-label">Days 1–30 · Audit and inventory</p>
+        <p class="doc-phase-title">Learn the buyer, the deals, and the assets</p>
+        <ul class="doc-phase-list">
+          <li>Audit the existing proposal response library; identify content gaps, outdated assets, and brand inconsistencies</li>
+          <li>Shadow sales conversations to understand the healthcare logistics buyer journey, common objections, and win patterns</li>
+          <li>Map the current proposal workflow end-to-end and document hand-off points between marketing, sales, and SMEs</li>
+        </ul>
+      </div>
+
+      <div class="doc-phase">
+        <p class="doc-phase-label">Days 31–60 · Voice of sales</p>
+        <p class="doc-phase-title">Build modular content driven by what reps actually need</p>
+        <ul class="doc-phase-list">
+          <li>Establish quarterly Voice-of-Sales calls (model proven at Life Fitness) to surface competitive intelligence and content gaps</li>
+          <li>Design modular, brand-aligned content blocks that compress RFP turnaround without sacrificing quality</li>
+          <li>Stand up a presentation template system aligned to MedSpeed's brand: customizable per prospect, consistent in voice</li>
+        </ul>
+      </div>
+
+      <div class="doc-phase">
+        <p class="doc-phase-label">Days 61–90 · Velocity and intelligence</p>
+        <p class="doc-phase-title">Systematize feedback loops and measure what matters</p>
+        <ul class="doc-phase-list">
+          <li>Lead the cross-functional task force on market intelligence; coordinate reporting cadence and distribution</li>
+          <li>Implement a win/loss feedback loop that feeds deal outcomes back into the proposal content library</li>
+          <li>Establish baseline metrics for proposal cycle time, win rate, and content reuse to enable ongoing improvement</li>
+        </ul>
+      </div>
+      <div class="doc-footer"><span>MedSpeed · RFP-2026-0427-BE</span><span>Page 05</span></div>
+    </section>
+
+    <section class="doc-page" id="qualifications">
+      <p class="doc-section-num">04</p>
+      <h2 class="doc-section-title">Qualifications &amp; capabilities matrix</h2>
+      <table class="doc-matrix">
+        <thead>
+          <tr><th>Required capability</th><th>Blake's experience</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>7+ years B2B proposal &amp; presentation experience</td>
+            <td>6+ years B2B marketing, including authoring strategic narratives for $700K+/year RFPs and building presentation libraries used in active sales cycles</td>
+          </tr>
+          <tr>
+            <td>Bachelor's degree in marketing or related field</td>
+            <td>B.S. in Advertising, University of Illinois at Urbana-Champaign</td>
+          </tr>
+          <tr>
+            <td>Salesforce CRM proficiency</td>
+            <td>Daily user; led data quality initiative reducing missing contact fields from ~50% to ~13% in a 50,000-contact database</td>
+          </tr>
+          <tr>
+            <td>HubSpot marketing automation</td>
+            <td>Implemented HubSpot CRM and automation company-wide at Fuel Me; self-taught the platform and onboarded the entire organization</td>
+          </tr>
+          <tr>
+            <td>PowerPoint &amp; graphical presentation tools</td>
+            <td>Built templatized pitch decks customizable per prospect; condensed a 75+ page master deck into a higher-adoption version; directed customer showcase storyboards</td>
+          </tr>
+          <tr>
+            <td>RFP knowledge base platforms (e.g. Qvidian)</td>
+            <td>Built and maintained sales enablement content libraries; quick learner of new platforms (Pardot, Kentico, Livestorm all self-onboarded)</td>
+          </tr>
+          <tr>
+            <td>Healthcare marketing experience (preferred)</td>
+            <td>Adjacent enterprise B2B experience including Lidl, Kroger, Digital Realty, Marriott, Hilton, and Hyatt — comparable buyer complexity and stakeholder rigor</td>
+          </tr>
+          <tr>
+            <td>Strategic + tactical execution</td>
+            <td>Built a marketing function from zero at Fuel Me through a $18M Series A; owned U.S. GTM strategy for a ~$418M segment at Life Fitness</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="doc-footer"><span>MedSpeed · RFP-2026-0427-BE</span><span>Page 06</span></div>
+    </section>
+
+    <section class="doc-page" id="cases">
+      <p class="doc-section-num">05</p>
+      <h2 class="doc-section-title">Relevant case studies</h2>
+
+      <div class="doc-case">
+        <p class="doc-case-num">Case 5.1</p>
+        <h3 class="doc-case-title">Mill Creek key account RFP narrative</h3>
+        <div class="doc-case-row"><span class="doc-case-label">Situation</span><span class="doc-case-text">Life Fitness was pursuing a $700K+/year strategic engagement with a major Multi-Unit Housing developer. The opportunity required a presentation that went beyond product features to position Life Fitness as a strategic partner.</span></div>
+        <div class="doc-case-row"><span class="doc-case-label">Approach</span><span class="doc-case-text">Synthesized third-party research from McKinsey, Global Wellness Institute, Murphy Research, and ACSM into a consultative narrative covering wellness real estate trends, resident demographics, strength training growth, layout philosophy, and ADA compliance.</span></div>
+        <div class="doc-case-row"><span class="doc-case-label">Result</span><span class="doc-case-text">The presentation set the stage for all subsequent design, technology, and product sessions in the engagement and directly informed downstream campaign and account strategy.</span></div>
+      </div>
+
+      <div class="doc-case">
+        <p class="doc-case-num">Case 5.2</p>
+        <h3 class="doc-case-title">MUH warranty promotional campaign</h3>
+        <div class="doc-case-row"><span class="doc-case-label">Situation</span><span class="doc-case-text">Multi-Unit Housing was an underperforming segment with a large database of dormant contacts and low engagement on standard marketing sends.</span></div>
+        <div class="doc-case-row"><span class="doc-case-label">Approach</span><span class="doc-case-text">Built a targeted campaign in Pardot Engagement Studios, sourced 8,000+ contacts via Salesforce and ZoomInfo enrichment, and partnered with three inside sellers to deliver personalized outreach from their individual accounts rather than generic marketing sends.</span></div>
+        <div class="doc-case-row"><span class="doc-case-label">Result</span><span class="doc-case-text">34 new opportunities and $670K+ in attributed pipeline from a single campaign.</span></div>
+      </div>
+
+      <div class="doc-case">
+        <p class="doc-case-num">Case 5.3</p>
+        <h3 class="doc-case-title">Working with US Marketing playbook</h3>
+        <div class="doc-case-row"><span class="doc-case-label">Situation</span><span class="doc-case-text">Field sellers at Life Fitness lacked a clear roadmap for engaging the marketing team — what existed, what marketing could provide, and how to request support.</span></div>
+        <div class="doc-case-row"><span class="doc-case-label">Approach</span><span class="doc-case-text">Authored the "Working with US Marketing" guide from scratch, covering available collateral, customer insight resources, regional event support, paid media, and FAQs, with a creative asset inspiration board to showcase breadth.</span></div>
+        <div class="doc-case-row"><span class="doc-case-label">Result</span><span class="doc-case-text">First document of its kind in the segment; reduced friction between marketing and sales and accelerated asset request cycles.</span></div>
+      </div>
+      <div class="doc-footer"><span>MedSpeed · RFP-2026-0427-BE</span><span>Page 07</span></div>
+    </section>
+
+    <section class="doc-page" id="why-blake">
+      <p class="doc-section-num">06</p>
+      <h2 class="doc-section-title">Why Blake</h2>
+
+      <div class="doc-diff">
+        <h3 class="doc-diff-title">Built from zero, scaled to enterprise</h3>
+        <p class="doc-diff-body">Few marketers have both built a function from a blank page (Fuel Me, sole marketer through $18M Series A) and operated inside a global enterprise with complex stakeholder management (Life Fitness, with accounts including Marriott, Hilton, and Hyatt). Startup scrappiness with enterprise-ready judgment.</p>
+      </div>
+
+      <div class="doc-diff">
+        <h3 class="doc-diff-title">Proposal author, not just marketer</h3>
+        <p class="doc-diff-body">Most marketing managers can write campaigns. Fewer have authored the strategic narrative for a key account RFP, synthesizing third-party research into a consultative pitch that anchors the entire deal. Blake has done exactly that and would treat MedSpeed's proposal library as a strategic asset, not a filing cabinet.</p>
+      </div>
+
+      <div class="doc-diff">
+        <h3 class="doc-diff-title">Sales-partnership mindset</h3>
+        <p class="doc-diff-body">Every initiative starts with what the seller actually needs: Voice-of-Sales calls, customizable pitch decks, individualized seller sends, condensed pitch materials based on usage feedback. No work happens in a marketing vacuum.</p>
+      </div>
+
+      <div class="doc-diff" style="margin-bottom: 0;">
+        <h3 class="doc-diff-title">Comfortable in imperfect data environments</h3>
+        <p class="doc-diff-body">Most B2B marketers wait for clean attribution before acting. Blake delivers results in environments where infrastructure is still being built, then improves the infrastructure along the way (50% to 13% missing contact fields, $900 to $90 cost per lead, zero to a stage-aware nurture system).</p>
+      </div>
+      <div class="doc-footer"><span>MedSpeed · RFP-2026-0427-BE</span><span>Page 08</span></div>
+    </section>
+
+    <section class="doc-page" id="terms">
+      <p class="doc-section-num">07</p>
+      <h2 class="doc-section-title">Investment &amp; terms</h2>
+      <table class="doc-terms">
+        <tr><td>Engagement type</td><td>Full-time, hybrid</td></tr>
+        <tr><td>On-site commitment</td><td>Elmhurst, IL — Thursdays confirmed; additional days available as the role requires</td></tr>
+        <tr><td>Proposed start date</td><td>Available immediately, with a standard two-week courtesy notice</td></tr>
+        <tr><td>Investment range</td><td>Aligned with the posted band of $110,000 – $120,000</td></tr>
+        <tr><td>Bonus structure</td><td>Open to discussion in line with MedSpeed's discretionary program</td></tr>
+        <tr><td>Term</td><td>Long-term partnership preferred</td></tr>
+        <tr><td>Validity of this proposal</td><td>90 days from date of issue</td></tr>
+      </table>
+      <p class="doc-stamp">Submitted in compliance with all stated requirements and aligned to the position description as published.</p>
+      <div class="doc-footer"><span>MedSpeed · RFP-2026-0427-BE</span><span>Page 09</span></div>
+    </section>
+
+    <section class="doc-page" id="references">
+      <p class="doc-section-num">08</p>
+      <h2 class="doc-section-title">References &amp; next steps</h2>
+      <p class="doc-body">Professional references and selected work samples available upon request. LinkedIn recommendations and additional context viewable at <a href="https://linkedin.com/in/blakeelford">linkedin.com/in/blakeelford</a>.</p>
+      <p class="doc-body" style="margin-top: 1.5rem;">The recommended next step in MedSpeed's review of this proposal is a 30-minute introductory conversation. Blake is available at the convenience of the hiring team.</p>
+
+      <div class="doc-contact">
+        <p class="doc-contact-name">Blake W. Elford</p>
+        <p class="doc-contact-line">Chicago, IL</p>
+        <p class="doc-contact-line"><a href="mailto:blakebyelford@gmail.com">blakebyelford@gmail.com</a></p>
+        <p class="doc-contact-line">(281) 928-8447</p>
+        <p class="doc-contact-line"><a href="https://linkedin.com/in/blakeelford">linkedin.com/in/blakeelford</a></p>
+      </div>
+
+      <p class="doc-stamp" style="margin-top: 1.75rem;">End of proposal. Thank you for your consideration.</p>
+      <div class="doc-footer"><span>MedSpeed · RFP-2026-0427-BE</span><span>Page 10</span></div>
+    </section>
+
+  </div>
+
+</body>
+</html>
